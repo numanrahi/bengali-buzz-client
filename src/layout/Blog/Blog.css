@@ -1,0 +1,20 @@
+.qna {
+    border-radius: 8px;
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid rgba(0, 255, 255, 0.442);
+}
+
+.question {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.answer {
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
