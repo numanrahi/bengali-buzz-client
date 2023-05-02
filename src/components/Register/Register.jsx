@@ -1,30 +1,33 @@
 import React from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Form, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
     return (
         <Container className='mx-auto w-25'>
-            <h3 className='text-center my-2 py-2'>Please Login</h3>
+            <h3 className='text-center my-2 py-2'>Please Register</h3>
             <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" name='name' placeholder="Your Name" required />
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" required />
                 </Form.Group>
-
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check type="checkbox" name="accept" label="Accept Terms and Conditions" />
                 </Form.Group>
                 <Button variant="primary" className='w-100' type="submit">
-                    Login
+                    Register
                 </Button>
                 <br />
                 <Form.Text className="text-secondary">
-                Don't Have An Account ? <Link to="/register">Register</Link>
+                    Already Have An Account ? <Link to="/login">Login</Link>
                 </Form.Text>
                 <Form.Text className="text-success">
 
@@ -37,4 +40,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

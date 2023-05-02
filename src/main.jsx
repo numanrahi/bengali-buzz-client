@@ -11,6 +11,7 @@ import Blog from './layout/Blog/Blog.jsx';
 import error404 from './assets/404.jpg'
 import Banner from './components/Banner/Banner.jsx';
 import Login from './components/Login/Login.jsx';
+import Register from './components/Register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element:<Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       },
       {
         path: '*',
