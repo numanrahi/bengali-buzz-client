@@ -1,0 +1,11 @@
+.question{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+.answer{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
