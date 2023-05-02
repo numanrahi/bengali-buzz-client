@@ -7,7 +7,7 @@ const Blog = () => {
         <div>
             <div className='my-5 fs-4 px-5'>
                 <Marquee>
-                    Welcome Blog Page!!!
+                    Welcome to Blog Page!!!
                 </Marquee>
             </div>
             {/* question 1 section */}

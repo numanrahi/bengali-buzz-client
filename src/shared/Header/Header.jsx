@@ -28,7 +28,7 @@ const Header = () => {
 
                     <Link
                         className="text-decoration-none title-text fw-bold fs-5"
-                        to="/"
+                        to="/blog"
                     >
                         Blog
                     </Link>

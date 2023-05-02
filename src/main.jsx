@@ -10,6 +10,7 @@ import Main from './layout/Main.jsx';
 import Blog from './layout/Blog/Blog.jsx';
 import error404 from './assets/404.jpg'
 import Banner from './components/Banner/Banner.jsx';
+import Login from './components/Login/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element:<Blog></Blog>
+      },
+      {
+        path: '/login',
+        element:<Login></Login>
       },
       {
         path: '*',
