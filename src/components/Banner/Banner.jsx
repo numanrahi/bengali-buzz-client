@@ -2,6 +2,7 @@ import React from 'react';
 import './Banner.css'
 import food1 from '../../assets/food-resize-1.jpg'
 import { BsArrowRight } from 'react-icons/bs';
+import Menu from '../Menu/Menu';
 
 const Banner = () => {
     return (
@@ -25,6 +26,7 @@ const Banner = () => {
                     <img className='img-fluid rounded' src="https://img.freepik.com/premium-photo/indian-hindu-veg-thali-food-platter-selective-focus_466689-36343.jpg" />
                 </div>
             </div>
+            <Menu></Menu>
         </div>
     );
 };

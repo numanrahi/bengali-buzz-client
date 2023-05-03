@@ -1,0 +1,16 @@
+.menu-cls{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.w-10{
+    width: 100px;
+    border: 2px solid #d1a054;
+    background-color: #d1a054;
+}
+.card-img{
+    height: 120px;
+    width: 120px;
+}
+.text-gold{
+    color: #d1a054;
+}
