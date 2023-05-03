@@ -22,8 +22,8 @@ const Menu = () => {
                 </div>
                 <div className='col-11 col-sm-6 p-4 d-flex'>
                     <img src="https://www.dhakafoodster.com/wp-content/uploads/2021/06/Sultan%E2%80%99s-Diner-Mirpur-Kacchi-Biriyani-1.jpg" className='card-img' alt="" />
-                    <div className='p-3d-flex justify-content-between'>
-                        <div className='fs-3'><span>Kacchi Biryani</span> <span>$ 650</span></div>
+                    <div className='p-3'>
+                        <div className='fs-3 d-flex justify-content-between'><span>Kacchi Biryani</span> <span>$ 650</span></div>
                         <div className='fs-5'>Kacchi Biryani, an aromatic symphony of spices and tender meat.</div>
                     </div>
                 </div>
