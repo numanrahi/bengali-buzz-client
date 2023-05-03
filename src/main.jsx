@@ -12,23 +12,24 @@ import error404 from './assets/404.jpg'
 import Banner from './components/Banner/Banner.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children:[
+    children: [
       {
         path: '/',
         element: <Banner></Banner>
       },
       {
         path: '/blog',
-        element:<Blog></Blog>
+        element: <Blog></Blog>
       },
       {
         path: '/login',
-        element:<Login></Login>
+        element: <Login></Login>
       },
       {
         path: '/register',
@@ -37,8 +38,8 @@ const router = createBrowserRouter([
       {
         path: '*',
         element: <div>
-        <div className='text-center display-1'><img src={error404} alt="" /></div>
-        <div className='display-1 text-center mt-5'>OPPS! PAGE NOT FOUND <hr></hr></div>
+          <div className='text-center display-1'><img src={error404} alt="" /></div>
+          <div className='display-1 text-center mt-5'>OPPS! PAGE NOT FOUND <hr></hr></div>
         </div>
       }
     ]
@@ -47,6 +48,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
