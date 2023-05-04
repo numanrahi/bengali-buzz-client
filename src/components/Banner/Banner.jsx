@@ -4,13 +4,14 @@ import food1 from '../../assets/food-resize-1.jpg'
 import { BsArrowRight } from 'react-icons/bs';
 import Menu from '../Menu/Menu';
 import MarqueeChef from '../MarqueeChef/MarqueeChef';
+import Footer from '../Footer/Footer';
 
 const Banner = () => {
     return (
         <div>
             <div
                 className="mx-auto row justify-content-center align-items-center"
-                style={{ maxWidth: "1200px" }}
+                style={{maxWidth: "1200px"}}
             >
                 <div className="col-11 col-md-8 d-flex justify-content-center align-items-center flex-column py-5">
                     <div className="w-75 fw-bold mx-auto text-center display-6 pt-5 pb-4 title-text text-center text-dance">
