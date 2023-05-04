@@ -13,6 +13,9 @@ import Banner from './components/Banner/Banner.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
+import ChefData from './layout/ChefData/ChefData.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/chef-recipes/:ID',
+        element: <ChefData></ChefData>,
+        loader: ({params})=> fetch('https://assignment-10-server-numanrahi.vercel.app/chef')
       },
       {
         path: '*',

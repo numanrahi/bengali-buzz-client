@@ -4,7 +4,7 @@ import food1 from '../../assets/food-resize-1.jpg'
 import { BsArrowRight } from 'react-icons/bs';
 import Menu from '../Menu/Menu';
 import MarqueeChef from '../MarqueeChef/MarqueeChef';
-import Footer from '../Footer/Footer';
+import ChefInfo from '../ChefInfo/ChefInfo';
 
 const Banner = () => {
     return (
@@ -30,6 +30,7 @@ const Banner = () => {
             </div>
             <MarqueeChef></MarqueeChef>
             <Menu></Menu>
+            <ChefInfo></ChefInfo>
         </div>
     );
 };

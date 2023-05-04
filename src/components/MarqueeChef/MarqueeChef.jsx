@@ -7,7 +7,7 @@ const MarqueeChef = () => {
 	const [chefs, setChefs] = useState([]);
 	
 	useEffect(() => {
-		fetch("http://localhost:5000/chefs")
+		fetch("http://localhost:5000/chefs-marquee")
 		.then((res) => res.json())
 		.then((data) => setChefs(data));
 	}, []);
