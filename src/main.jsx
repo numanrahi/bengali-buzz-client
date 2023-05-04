@@ -16,6 +16,7 @@ import AuthProvider from './provider/AuthProvider.jsx';
 import ChefData from './layout/ChefData/ChefData.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './layout/PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/chef-recipes/:ID',
-        element: <ChefData></ChefData>,
+        element: <PrivateRoute><ChefData></ChefData></PrivateRoute>,
         loader: ({params})=> fetch('https://assignment-10-server-numanrahi.vercel.app/chef')
       },
       {

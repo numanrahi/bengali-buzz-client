@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
+    const navigate = useNavigate();
+	const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const { signIn, googleProvider, githubProvider, auth } = useContext(AuthContext);
 
@@ -25,6 +29,7 @@ const Login = () => {
                 console.log(loggedUser);
                 setSuccess('User Login Successfully')
                 form.reset();
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);

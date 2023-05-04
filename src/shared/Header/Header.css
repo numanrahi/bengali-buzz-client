@@ -9,3 +9,6 @@
 .text-dance {
     font-family: 'Dancing Script', cursive;
 }
+.active{
+    color: red !important;
+}
