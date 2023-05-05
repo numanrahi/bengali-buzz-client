@@ -12,3 +12,4 @@ Firebase Live site link : [Bengali Buzz](https://assignment-10-422d7.web.app/)
 - Blog page with answering questions
 - Footer
 - Page name displayed on the banner
+- Lazy Load added
