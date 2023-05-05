@@ -11,7 +11,7 @@ const MarqueeChef = () => {
 			.then((res) => res.json())
 			.then((data) => setChefs(data));
 	}, []);
-
+	// console.log(chefs);
 	return (
 		<div className="marquee-body padding-lot px-sm-2">
 			<div className="d-flex justify-content-between align-items-center">
