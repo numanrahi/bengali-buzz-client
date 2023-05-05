@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const navigate = useNavigate();
-	const location = useLocation();
+    const location = useLocation();
 
     const from = location.state?.from?.pathname || "/";
 
@@ -37,6 +37,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 toast('Login Successfully');
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 toast.error(error.message)
@@ -48,6 +49,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 toast('Login Successfully');
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 toast.error(error.message)

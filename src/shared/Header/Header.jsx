@@ -52,7 +52,7 @@ const Header = () => {
                         <div>
                             <BsPersonCircle
                                 data-tooltip-id="my-tooltip"
-                                data-tooltip-content={user.email}
+                                data-tooltip-content={user.displayName}
                                 className="fs-2 title-text"
                             />
                             <Tooltip id="my-tooltip" />

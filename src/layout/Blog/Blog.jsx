@@ -1,52 +1,24 @@
 import React from 'react';
 import './Blog.css'
-import Marquee from 'react-fast-marquee';
+// import Marquee from 'react-fast-marquee';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const Blog = () => {
-    // function generatePdfAndDownload() {
-    //     // Generate the PDF
-    //     const pdfDoc = <Document>
-    //         <Page size="A4" style={styles.page}>
-    //             <View style={styles.section}>
-    //                 <Text>Hello, World!</Text>
-    //             </View>
-    //         </Page>
-    //     </Document>
-
-    //     // Convert the PDF to a blob
-    //     const pdfBlob = new Blob([pdfDoc], { type: 'application/pdf' })
-
-    //     // Save the PDF as a file
-    //     saveAs(pdfBlob, 'my-document.pdf');
-    // }
-
-    // const styles = StyleSheet.create({
-    //     page: {
-    //         flexDirection: 'row',
-    //         backgroundColor: '#E4E4E4'
-    //     },
-    //     section: {
-    //         margin: 10,
-    //         padding: 10,
-    //         flexGrow: 1
-    //     }
-    // });
-
-
-
-    // Render the PDF document as a PDFDownloadLink component
-
-
     return (
 
         <div>
 
             <div className='my-5 fs-4 px-5'>
-                <Marquee>
+                {/* <Marquee>
                     Welcome to Blog Page!!!
-                </Marquee>
+                </Marquee> */}
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                    {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+                </Pdf>
             </div>
-            <div>
+            <div ref={ref}>
                 {/* question 1 section */}
                 <section className='qna'>
                     <div className='question' >Tell us the differences between uncontrolled and controlled components?</div>
@@ -83,10 +55,6 @@ const Blog = () => {
                     </div>
                 </section>
             </div>
-            {/* <div>
-            <h1>PDF Generator</h1>
-            <button onClick={generatePdfAndDownload}>Download PDF</button>
-          </div> */}
         </div >
     );
 }
