@@ -6,7 +6,7 @@ import SingleChefRecipes from "../../components/SingleChefRecipes/SingleChefReci
 const ChefData = () => {
     const [recipes, setRecipes] = useState([]);
     const [chef, setChef] = useState([]);
-
+    
     const ID = useParams();
     const info = useLoaderData();
     useEffect(() => {
@@ -15,8 +15,8 @@ const ChefData = () => {
         const iterableRecipes = selectChef.recipe;
         setRecipes(iterableRecipes);
     }, []);
-    
-    // console.log(recipes);
+
+    // console.log(chef);
 
     return (
         <div>
@@ -28,7 +28,7 @@ const ChefData = () => {
                     <div className="col-7">
                         <img
                             className="w-100 img-round"
-                            src={chef.Image}
+                            src={chef.chef_picture}
                             alt=""
                         />
                         <div className="title-text text-dance fs-6 mt-2">
@@ -40,11 +40,11 @@ const ChefData = () => {
                     </div>
                     <div className="col-5 mx-auto">
                         <div className="display-3 title-text text-dance text-center">
-                            {chef.name}
+                            {chef.chef_name}
                         </div>
                         <hr />
                         <div className="title-text text-dance fs-4 text-center">
-                            {chef.name} is an expert chef with {chef.experience}
+                            {chef.chef_name} is an expert chef with {chef.years_of_experience}
                             + years of experience
                         </div>
                         <div className="title-text fs-6 text-center">

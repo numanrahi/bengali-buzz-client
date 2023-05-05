@@ -5,13 +5,13 @@ import ChefSlide from "../ChefSlide/ChefSlide";
 
 const MarqueeChef = () => {
 	const [chefs, setChefs] = useState([]);
-	
+
 	useEffect(() => {
-		fetch("http://localhost:5000/chefs-marquee")
-		.then((res) => res.json())
-		.then((data) => setChefs(data));
+		fetch("https://assignment-10-server-numanrahi.vercel.app/chefs-marquee")
+			.then((res) => res.json())
+			.then((data) => setChefs(data));
 	}, []);
-	
+
 	return (
 		<div className="marquee-body padding-lot px-sm-2">
 			<div className="d-flex justify-content-between align-items-center">

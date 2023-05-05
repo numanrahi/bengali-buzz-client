@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Chef = ({chef}) => {
 
     const { id, chef_picture, chef_name, years_of_experience, numbers_of_recipes, likes } = chef;
-
+	
     return (
 		<div className="col-12 col-md-6 mx-auto chef-boxs row align-items-center w-100 card-bottom-20 py-5">
 			<div className="col-12 col-md-6 mx-auto">

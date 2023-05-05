@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { signInWithPopup } from 'firebase/auth';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -13,26 +14,21 @@ const Login = () => {
 
     const { signIn, googleProvider, githubProvider, auth } = useContext(AuthContext);
 
-    const [success, setSuccess] = useState('')
-
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password);
-
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
-                setSuccess('User Login Successfully')
+                toast('Login Successfully');
                 form.reset();
                 navigate(from, { replace: true })
             })
             .catch(error => {
-                console.log(error);
+                toast.error(error.message)
             })
     }
 
@@ -40,10 +36,10 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                toast('Login Successfully');
             })
             .catch(error => {
-                console.log('error', error.message);
+                toast.error(error.message)
             })
     }
 
@@ -51,26 +47,17 @@ const Login = () => {
         signInWithPopup(auth, githubProvider)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                toast('Login Successfully');
             })
             .catch(error => {
-                console.log(error);
+                toast.error(error.message)
             })
     }
 
     return (
         <Container className='mx-auto w-25'>
-            {/* {user && <div>
-                <h3>User: {user.displayName}</h3>
-                <p>Email : {user.email}</p>
-                <img src={user.photoURL} alt="" />
-            </div>} */}
-
             <h3 className='text-center my-2 py-2'>Please Login</h3>
             <Form onSubmit={handleLogin}>
-                <Form.Text className="text-success mx-auto">
-                    {success}
-                </Form.Text>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" required />

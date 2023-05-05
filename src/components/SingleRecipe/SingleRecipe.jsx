@@ -7,13 +7,13 @@ import { toast } from "react-toastify";
 const SingleRecipe = ({ recipe }) => {
     const { id, img, info, ingredients, method, name, rating } = recipe;
     const [disabled, setDisabled] = useState(false);
-    console.log(id);
+    console.log(recipe);
 
     const handleFavorite = () => {
         toast(name + " is your favorite food");
         setDisabled(true);
     }
-    console.log( id, img, info, ingredients, method, name, rating);
+    // console.log( id, img, info, ingredients, method, name, rating);
 
     return (
         <section>
@@ -31,8 +31,8 @@ const SingleRecipe = ({ recipe }) => {
                 <div className="text-center title-text fs-2 text-dance fw-bold">Made with</div>
                 <div className="text-center title-text fs-6">{ingredients}</div>
             </div>
-            <div className="col-6 d-flex flex-column">
-                <img className="w-100" src={img} />
+            <div className="col-6 mx-auto d-flex flex-column">
+                <img className="w-75 rounded-1" src={img} />
                 <div className="d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                         <Rating

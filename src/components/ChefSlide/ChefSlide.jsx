@@ -4,7 +4,7 @@ import { BsStar, BsStarFill } from "react-icons/bs";
 import Rating from "react-rating";
 
 const ChefSlide = ({ chef }) => {
-    console.log(chef?.img);
+    // console.log(chef?.img);
     return (
         <div className="mx-5 my-5 chef-box">
             <div>
